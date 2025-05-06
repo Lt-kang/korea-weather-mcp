@@ -1,7 +1,7 @@
 # Korea Weather MCP (한국 날씨 MCP)
 
 ## 프로젝트 소개
-이 프로젝트는 국내/해외 도시의 날씨 정보를 조회하여 알려주는 MCP(Model Context Provider) 서버를 제공합니다. 
+이 프로젝트는 국내/해외 도시의 날씨 정보를 조회하여 알려주는 MCP(Model Context Provider) 서버를 제공합니다.   
 OpenWeatherMap API를 활용하여 실시간 날씨 데이터를 가져와 사용자에게 제공합니다.
 
 ## 기능
@@ -32,7 +32,7 @@ OPENWEATHER_API_KEY=your_api_key_here
 OPENWEATHER_CITY=Seoul  # 기본 도시 설정
 ```
 
-OpenAI API 키는 [여기](https://platform.openai.com/settings/profile/api-keys)에서 발급받을 수 있습니다.
+OpenAI API 키는 [여기](https://platform.openai.com/settings/profile/api-keys)에서 발급받을 수 있습니다.  
 OpenWeatherMap API 키는 [여기](https://openweathermap.org/api)에서 발급받을 수 있습니다.
 
 ## 사용 방법
