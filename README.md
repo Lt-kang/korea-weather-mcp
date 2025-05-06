@@ -26,11 +26,14 @@ pip install -r requirements.txt
 `.env` 파일을 프로젝트 루트 디렉토리에 생성하고 다음 정보를 입력합니다:
 
 ```
+OPENAI_API_KEY=your_api_key_here
+
 OPENWEATHER_API_KEY=your_api_key_here
 OPENWEATHER_CITY=Seoul  # 기본 도시 설정
 ```
 
-OpenWeatherMap API 키는 [여기](https://openweathermap.org/api)에서 무료로 발급받을 수 있습니다.
+OpenAI API 키는 [여기](https://platform.openai.com/settings/profile/api-keys)에서 발급받을 수 있습니다.
+OpenWeatherMap API 키는 [여기](https://openweathermap.org/api)에서 발급받을 수 있습니다.
 
 ## 사용 방법
 1. MCP 서버 실행:
