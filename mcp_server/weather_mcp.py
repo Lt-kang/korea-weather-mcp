@@ -3,7 +3,6 @@ import os
 from fastmcp import FastMCP, Client
 import datetime
 
-sys_date = datetime.now().strftime("%Y%m%d")
 
 load_dotenv()
 
