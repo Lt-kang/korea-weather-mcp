@@ -11,7 +11,7 @@ OpenWeatherMap API를 활용하여 실시간 날씨 데이터를 가져와 사�
 ## 설치 방법
 ```bash
 # 저장소 복제
-git clone https://github.com/Lt-kang/korea-weatehr-mcp.git
+git clone https://github.com/Lt-kang/korea-weather-mcp.git
 cd korea-weather-mcp
 
 # 가상 환경 생성 및 활성화
