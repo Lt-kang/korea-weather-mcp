@@ -38,7 +38,7 @@ OpenWeatherMap API 키는 [여기](https://openweathermap.org/api)에서 발급�
 ## 사용 방법
 1. MCP 서버 실행:
 ```bash
-python weather_mcp.py
+python mcp_server/weather_mcp.py
 ```
 
 2. Jupyter Notebook에서 `main.ipynb`를 실행하여 인터랙티브하게 날씨 정보를 조회할 수 있습니다.
