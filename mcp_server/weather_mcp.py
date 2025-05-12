@@ -1,8 +1,8 @@
 from dotenv import load_dotenv
 import os
-from fastmcp import FastMCP, Client
+from fastmcp import FastMCP 
 import datetime
-
+from pathlib import Path
 
 load_dotenv()
 
@@ -21,17 +21,29 @@ mcp = FastMCP(
     port=7000
 )
 
+korea_city_list = open(Path(__file__).parent / 'korea_city.txt', 'r', encoding='utf-8').read().splitlines()
 
-
+'''
+openweathermap에서 제공하는 도시 리스트
+https://bulk.openweathermap.org/sample/city.list.json.gz
+'''
 @mcp.tool(name="global_weather_tool")
 def global_weather_tool(city: str = 'Seoul') -> str:
     f'''
     도시의 날씨를 조회하는 도구 입니다.
+    이때 city parameter로 입력 가능한 도시 list는 아래와 같습니다.
+
+    {'\n'.join(korea_city_list)}
+
+    만약 "OO구" 이런 입력이 들어온다면 이는 서울 시내의 구를 의미합니다.
     '''
+    print(city)
     api_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={OPENWEATHER_API_KEY}&units=metric&lang=kr"
 
     try:
-        response = requests.get(api_url).json()
+        response = requests.get(api_url)
+        print(response.status_code)
+        response = response.json()
 
         city_temperature = response['main']['temp']
         city_weather = response['weather'][0]['description']
@@ -67,6 +79,8 @@ if __name__ == "__main__":
     '''
     test code
     '''
+    # from fastmcp import Client
+
     # client = Client(mcp)
 
     # async def call_tool(city: str):
