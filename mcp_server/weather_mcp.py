@@ -27,8 +27,8 @@ korea_city_list = open(Path(__file__).parent / 'korea_city.txt', 'r', encoding='
 openweathermap에서 제공하는 도시 리스트
 https://bulk.openweathermap.org/sample/city.list.json.gz
 '''
-@mcp.tool(name="global_weather_tool")
-def global_weather_tool(city: str = 'Seoul') -> str:
+@mcp.tool()
+def kor_weather_tool(city: str = 'Seoul') -> str:
     f'''
     도시의 날씨를 조회하는 도구 입니다.
     이때 city parameter로 입력 가능한 도시 list는 아래와 같습니다.
