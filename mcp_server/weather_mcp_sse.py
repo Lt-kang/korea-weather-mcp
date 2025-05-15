@@ -68,6 +68,7 @@ def kor_weather_tool(city: str = 'Seoul') -> str:
 
 
 if __name__ == "__main__":
+    # mcp.run(transport="sse")
     mcp.run(transport="sse")
     '''
     stdio로 실행을 원한다면
