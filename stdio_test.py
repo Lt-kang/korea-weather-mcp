@@ -31,10 +31,13 @@ async def call_stdio_mcp():
 
             agent = create_react_agent(model, tools)
 
-            inputs = {"messages": [("human", "오늘 강남구 날씨 알려줘")]}
+            user_input = "오늘 강남구 날씨 알려줘"
+            inputs = {"messages": [("human", user_input)]}
+
             result = await agent.ainvoke(inputs)
-            print("============== ai answer ==============")
-            print(result['messages'][-1].content)
+            print("========================================")
+            print(f"human: {user_input}")
+            print(f"Ai: {result['messages'][-1].content}")
             print("========================================")
 
 
