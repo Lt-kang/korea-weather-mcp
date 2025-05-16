@@ -15,7 +15,7 @@ import asyncio
 
 
 
-mcp = FastMCP(
+weather_mcp = FastMCP(
     name="weather_mcp",
     instructions="국내/해외 날씨를 조회하는 mcp server",
     port=7000
@@ -28,7 +28,7 @@ japan_city_list = open(Path(__file__).parent / 'japan_city.txt', 'r', encoding='
 openweathermap에서 제공하는 도시 리스트
 https://bulk.openweathermap.org/sample/city.list.json.gz
 '''
-@mcp.tool()
+@weather_mcp.tool()
 def global_weather_tool(city: str = 'Seoul') -> str:
     f'''
     이 함수는 가장 먼저 호출되어야 하는 함수 입니다.
@@ -81,7 +81,7 @@ def global_weather_tool(city: str = 'Seoul') -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="sse")
+    weather_mcp.run(transport="sse")
     '''
     stdio로 실행을 원한다면
     transfport 파라미터를 삭제하거나 (default가 stdio)
